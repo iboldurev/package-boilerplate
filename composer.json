@@ -1,0 +1,38 @@
+{
+    "name": "iboldurev/package-boilerplate",
+    "description": "Composer package boilerplate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Boldyrev",
+            "email": "iboldurev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.6.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Package\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Package\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "cs": "php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
